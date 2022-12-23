@@ -1,26 +1,29 @@
-import logo from "./logo.svg";
 import "./App.css";
+import Search from "./components/Search";
+import Button from "./components/Button";
+import SideMenuItem from "./components/SideMenuItem";
+import PaymentDetails from "./components/PaymentDetails";
 
 function App() {
+  let card = {
+    image: "mastercard",
+    number: "12233",
+    expiry: "23/2019",
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <h1 className="text-sm font-bold underline text-green-500">
-          Hello world!
-        </h1>
-      </header>
+      <Search />
+      <Button text="Download All" image="download" />
+      <SideMenuItem text="Dashboard" image="dashboard" />
+
+      <PaymentDetails card={card} />
+
+      <SideMenuItem
+        text="Settings"
+        image="settings"
+        count="10"
+        isActive={true}
+      />
     </div>
   );
 }
