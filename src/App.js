@@ -1,7 +1,7 @@
 import "./App.css";
 import Search from "./components/Search";
 import Button from "./components/Button";
-import SideMenuItem from "./components/SideMenuItem";
+import SideMenu from "./components/SideMenu";
 import PaymentDetails from "./components/PaymentDetails";
 
 function App() {
@@ -12,18 +12,14 @@ function App() {
   };
   return (
     <div className="App">
-      <Search />
-      <Button text="Download All" image="download" />
-      <SideMenuItem text="Dashboard" image="dashboard" />
-
-      <PaymentDetails card={card} />
-
-      <SideMenuItem
-        text="Settings"
-        image="settings"
-        count="10"
-        isActive={true}
-      />
+      <main className="flex flex-wrap w-full">
+        <SideMenu />
+        <main>
+          <Button text="Download All" image="download" />
+          <Search />
+          <PaymentDetails card={card} />
+        </main>
+      </main>
     </div>
   );
 }

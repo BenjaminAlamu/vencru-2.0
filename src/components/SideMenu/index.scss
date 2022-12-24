@@ -1,0 +1,16 @@
+.sidemenu {
+  width: 100%;
+  .count {
+    padding: 2px 10px;
+    width: 36px;
+    height: 24px;
+    background: #f2f4f7;
+    border-radius: 16px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sidemenu {
+    width: 270px;
+  }
+}
