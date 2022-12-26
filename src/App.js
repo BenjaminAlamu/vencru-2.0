@@ -34,62 +34,6 @@ function App() {
     "Integrations",
     "API",
   ];
-
-  const headers = ["Invoice", "Amount", "Date", "Status", "Users on Plan", ""];
-
-  const mobileHeaders = ["Invoice", "Amount"];
-
-  const tableData = [
-    {
-      invoice: "Basic Plan - Dec 2022",
-      amount: "USD $10.00",
-      date: "Dec 1, 2022",
-      status: "Paid",
-      users: "user_avatars1",
-    },
-    {
-      invoice: "Basic Plan - Nov 2022",
-      amount: "USD $10.00",
-      date: "Nov 1, 2022",
-      status: "Paid",
-      users: "user_avatars2",
-    },
-    {
-      invoice: "Basic Plan - Oct 2022",
-      amount: "USD $10.00",
-      date: "Oct 1, 2022",
-      status: "Paid",
-      users: "user_avatars3",
-    },
-    {
-      invoice: "Basic Plan - Sep 2022",
-      amount: "USD $10.00",
-      date: "Sep 1, 2022",
-      status: "Paid",
-      users: "user_avatars4",
-    },
-    {
-      invoice: "Basic Plan - Aug 2022",
-      amount: "USD $10.00",
-      date: "Aug 1, 2022",
-      status: "Paid",
-      users: "user_avatars5",
-    },
-    {
-      invoice: "Basic Plan - Jul 2022",
-      amount: "USD $10.00",
-      date: "Jul 1, 2022",
-      status: "Paid",
-      users: "user_avatars6",
-    },
-    {
-      invoice: "Basic Plan - Jun 2022",
-      amount: "USD $10.00",
-      date: "Jun 1, 2022",
-      status: "Paid",
-      users: "user_avatars7",
-    },
-  ];
   return (
     <div className="App container max-w-full overflow-x-scroll">
       <main className="flex flex-wrap w-full">
@@ -102,7 +46,7 @@ function App() {
             </p>
           </main>
 
-          <main className="flex max-w-100 overflow-x-scroll my-4">
+          <main className="hidden sm:flex max-w-100 overflow-x-scroll my-4">
             {items.map((item, index) => (
               <p
                 className="p-3 border text-gray-700 font-medium "
@@ -189,11 +133,7 @@ function App() {
               <Button text="Download All" image="download" />
             </main>
 
-            <Table
-              headers={headers}
-              tableData={tableData}
-              mobileHeaders={mobileHeaders}
-            />
+            <Table />
           </main>
         </main>
       </main>
