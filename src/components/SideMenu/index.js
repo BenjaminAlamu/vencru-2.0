@@ -7,7 +7,7 @@ import MobileToggle from "../../assets/img/mobile-toggle.svg";
 const SideMenu = (props) => {
   const [showNav, setShowNav] = useState(false);
   return (
-    <main className="sidemenu bg-red-300 ">
+    <main className="sidemenu bg-white  ">
       <main className="flex justify-between items-center ">
         <img className="m-3 ml-6 mb-6" src={Logo}></img>
         <img

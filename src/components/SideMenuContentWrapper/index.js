@@ -1,6 +1,6 @@
 import React from "react";
 import SideMenuItem from "../SideMenuItem";
-import Search from "../Search";
+import TextInput from "../TextInput";
 import "./index.scss";
 import Logo from "../../assets/img/Logo.svg";
 import Lady from "../../assets/img/lady.svg";
@@ -24,7 +24,7 @@ const menu2 = [
 const SideMenuContentWrapper = (props) => {
   return (
     <main className="sidemenu_content bg-white">
-      <Search className="my-2" />
+      <TextInput type="search" placeholder="Search" className="my-2" />
       <main className="pl-4 mt-6">
         {menu.map((item, index) => (
           <SideMenuItem key={index} item={item} />

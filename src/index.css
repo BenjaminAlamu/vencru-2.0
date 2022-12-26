@@ -13,3 +13,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.card__wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.classses {
+  display: flex;
+  overflow-x: auto;
+}
+
+.wrap__container {
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.wrap__item {
+  display: inline-block;
+  border: 1px solid black;
+  margin: 5px;
+}
